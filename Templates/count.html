@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Word Counter</title>
+</head>
+<body>
+<h1>Your text consist of {{ wcount }} number of words</h1>
+<a href="{% url 'homepage' %}">Start Again!</a>
+<h1>Your original text</h1>
+{{ fulltext }}
+<h1>Total number of every word in your text</h1>
+<!–– {{ wdictionary }} -->
+{% for word, totalcount in wdictionary %}
+{{ word }} - {{ totalcount }}
+<br />
+{% endfor %}
+</body>
+</html>
